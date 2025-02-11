@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Mardi20250211.C_DAL.Helper;
 
-public class PasswordHasher
+public static class PasswordHasher
 {
     public static string HashPassword(string password)
     {
+        string salt = SHA512.Create(hashName: "furax").ToString();
         // Hacher le mot de passe avec BCrypt
-        string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+        string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password, salt);
         return hashedPassword;
     }
 

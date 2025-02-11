@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Mardi20250211.D_DL\Mardi20250211.D_DL.csproj" />
+  </ItemGroup>
+
 </Project>

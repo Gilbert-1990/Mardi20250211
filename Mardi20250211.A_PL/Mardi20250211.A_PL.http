@@ -1,0 +1,6 @@
+@Mardi20250211.A_PL_HostAddress = http://localhost:5249
+
+GET {{Mardi20250211.A_PL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

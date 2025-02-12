@@ -13,7 +13,7 @@ namespace Mardi20250211.C_DAL.Respositories
             throw new NotImplementedException();
         }
 
-        public async Task<bool> RegisterUserAsync(Utilisateur utilisateur)
+        public async Task<bool> RegisterUserAsync(EnregistrerUtilisateur utilisateur)
         {
             if (!String.IsNullOrEmpty(utilisateur.Password))
             {

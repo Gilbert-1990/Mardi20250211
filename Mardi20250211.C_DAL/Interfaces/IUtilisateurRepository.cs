@@ -8,6 +8,6 @@ namespace Mardi20250211.C_DAL.Interfaces
         Task<bool> LoginByEmailAsync(string email, string password);
 
         //register
-        Task<bool> RegisterUserAsync(Utilisateur utilisateur);
+        Task<bool> RegisterUserAsync(EnregistrerUtilisateur utilisateur);
     }
 }

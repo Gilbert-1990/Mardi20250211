@@ -7,10 +7,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{38c58e2e-293e-4dec-afbb-7ccdde1a8e4d}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
-    <RootPath>
-    </RootPath>
+    <RootPath></RootPath>
     <RootNamespace>Mardi20250211.Z_DB</RootNamespace>
     <AssemblyName>Mardi20250211.Z_DB</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
@@ -22,6 +21,7 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -44,7 +44,10 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>0</WarningLevel>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings></SuppressTSqlWarnings>
+    <NoWarn>SQL71501</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -55,6 +58,33 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
+    <Folder Include="Functions" />
+    <Folder Include="Procedures" />
     <Folder Include="Properties" />
+    <Folder Include="Scripts" />
+    <Folder Include="Security" />
+    <Folder Include="Security\Roles" />
+    <Folder Include="Security\Schemas" />
+    <Folder Include="Tables" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Functions\CreatePassword.sql" />
+    <Build Include="Procedures\sp_change_tache_status.sql" />
+    <Build Include="Procedures\sp_create_tache.sql" />
+    <Build Include="Procedures\sp_get_tache_by_id.sql" />
+    <Build Include="Procedures\sp_get_taches.sql" />
+    <Build Include="Procedures\sp_login.sql" />
+    <Build Include="Procedures\sp_register.sql" />
+    <Build Include="Procedures\sp_update_tache.sql" />
+    <Build Include="Security\Roles\FreeUser.sql" />
+    <Build Include="Security\Schemas\FreeUser.sql" />
+    <Build Include="Tables\Tache.sql" />
+    <Build Include="Tables\Utilisateur.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.Security.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mardi20250211.Z_DB.publish.xml" />
   </ItemGroup>
 </Project>

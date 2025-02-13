@@ -362,3 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /Mardi20250211.C_DAL/Resources/SharedResources.resx
+/Mardi20250211.C_DAL/Resources/SharedResources.Designer.cs

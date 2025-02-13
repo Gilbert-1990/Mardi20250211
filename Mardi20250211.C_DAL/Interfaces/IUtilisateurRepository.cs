@@ -1,13 +1,14 @@
-﻿using Mardi20250211.D_DL.Entities;
+﻿using Mardi20250211.D_DL;
+using Mardi20250211.D_DL.Entities;
 
 namespace Mardi20250211.C_DAL.Interfaces
 {
     public interface IUtilisateurRepository
     {
         //login
-        Task<bool> LoginByEmailAsync(string email, string password);
+        Task<Response<Utilisateur>> LoginByEmailAsync(LoginUtilisateur loginUser);
 
         //register
-        Task<bool> RegisterUserAsync(Utilisateur utilisateur);
+        Task<Response<Utilisateur>> RegisterUserAsync(EnregistrerUtilisateur utilisateur);
     }
 }

@@ -4,16 +4,32 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <InvariantGlobalization>true</InvariantGlobalization>
+    <InvariantGlobalization>false</InvariantGlobalization>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Resources\**" />
+    <Content Remove="Resources\**" />
+    <EmbeddedResource Remove="Resources\**" />
+    <None Remove="Resources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Helper\ConnectioStringManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Mardi20250211.B_BLL\Mardi20250211.B_BLL.csproj" />
     <ProjectReference Include="..\Mardi20250211.D_DL\Mardi20250211.D_DL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Helper\" />
   </ItemGroup>
 
 </Project>

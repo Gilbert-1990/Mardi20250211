@@ -13,7 +13,6 @@ namespace Mardi20250211.D_DL.Entities
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public string Email { get; set; }
-        public string Password { get; set; }
     }
     public class EnregistrerUtilisateur
     {
@@ -21,6 +20,13 @@ namespace Mardi20250211.D_DL.Entities
         public string Nom { get; set; }
         [Required]
         public string Prenom { get; set; }
+        [Required]
+        public string Email { get; set; }
+        [Required]
+        public string Password { get; set; }
+    }
+    public class LoginUtilisateur
+    {
         [Required]
         public string Email { get; set; }
         [Required]

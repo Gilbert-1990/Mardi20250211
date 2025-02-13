@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [FreeUser].[Register]
+﻿CREATE PROCEDURE [freeuser].[sp_register]
 	@Nom NVARCHAR(50),
 	@Prenom NVARCHAR(50),
 	@Email NVARCHAR(384),

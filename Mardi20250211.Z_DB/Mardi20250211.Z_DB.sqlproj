@@ -69,13 +69,13 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Functions\CreatePassword.sql" />
-    <Build Include="Procedures\ChangeTacheStatus.sql" />
-    <Build Include="Procedures\CreateTache.sql" />
-    <Build Include="Procedures\GetTacheById.sql" />
-    <Build Include="Procedures\GetTaches.sql" />
-    <Build Include="Procedures\Login.sql" />
-    <Build Include="Procedures\Register.sql" />
-    <Build Include="Procedures\UpdateTache.sql" />
+    <Build Include="Procedures\sp_change_tache_status.sql" />
+    <Build Include="Procedures\sp_create_tache.sql" />
+    <Build Include="Procedures\sp_get_tache_by_id.sql" />
+    <Build Include="Procedures\sp_get_taches.sql" />
+    <Build Include="Procedures\sp_login.sql" />
+    <Build Include="Procedures\sp_register.sql" />
+    <Build Include="Procedures\sp_update_tache.sql" />
     <Build Include="Security\Roles\FreeUser.sql" />
     <Build Include="Security\Schemas\FreeUser.sql" />
     <Build Include="Tables\Tache.sql" />

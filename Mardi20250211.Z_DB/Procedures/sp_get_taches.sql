@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [FreeUser].[GetTaches]
+﻿CREATE PROCEDURE [freeuser].[sp_get_taches]
 	@UtilisateurId INT
 AS
 BEGIN

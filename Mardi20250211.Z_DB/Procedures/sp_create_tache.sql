@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [FreeUser].[CreateTache]
+﻿CREATE PROCEDURE [freeuser].[sp_create_tache]
 	@Titre NVARCHAR(255), 
     @UtilisateurId INT
 AS
